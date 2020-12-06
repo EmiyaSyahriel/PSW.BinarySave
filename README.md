@@ -59,7 +59,7 @@ Then, use the codec to access the SaveData using data key
   SaveData.Save();
 ```
 You can also add the codec beforehand as a lookup and you won't need to specify which codec to call everytime. to use this feature, 
-Add `USE_CODEC_LOOKUP` to your compilation symbol (not available on prebuilt release.)
+Add `USE_CODEC_LOOKUP` to your conditional compilation symbol (available by default on prebuild package).
 ```
   // These codecs will be kept during runtime, you only need to add it once during initialization
   SaveData.AddEncoder(stringEncoder);
