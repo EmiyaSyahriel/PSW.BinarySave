@@ -14,7 +14,7 @@ Include the Project (or the `.vsproj`) to your solution (Solution > Add > Existi
 ## Usage
 First, Set the File path and name before your first access to SaveData Get/Set method. This class will initialize itself once when Get/Set method is called and then cache
 itself, so you can only be able to set the file path and name once before accessing the Get/Set method.
-```
+```csharp
   using PSW.BinarySave;
   using System;
   
@@ -30,7 +30,7 @@ itself, so you can only be able to set the file path and name once before access
 ```
 Then, you have to define some 'Codec's that converts Byte Array into runtime data and vice versa, these Codecs has type of BinaryDecoder and BinaryEncoder.
 Some codec were already defined in BasicCodec static class.
-```
+```csharp
   using PSW.BinarySave;
   using System.Text;
   
@@ -41,7 +41,7 @@ Some codec were already defined in BasicCodec static class.
   BinaryEncoder<string> stringEncoder = (source) => { Encoding.ASCII.GetBytes(source); };
 ```
 Then, use the codec to access the SaveData using data key
-```
+```csharp
   using PSW.BinarySave;
   
   // First access won't need any load, only in case you wanted to reload
@@ -60,7 +60,7 @@ Then, use the codec to access the SaveData using data key
 ```
 You can also add the codec beforehand as a lookup and you won't need to specify which codec to call everytime. to use this feature, 
 Add `USE_CODEC_LOOKUP` to your conditional compilation symbol (available by default on prebuild package).
-```
+```csharp
   // These codecs will be kept during runtime, you only need to add it once during initialization
   SaveData.AddEncoder(stringEncoder);
   SaveData.AddDecoder(stringDecoder);
