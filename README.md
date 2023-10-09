@@ -5,11 +5,11 @@ Tested with Unity 2020.1.4f1.
 
 ## Adding to Your Project
 ### Unity
-Put the entire project (excluding the vsproj) to anywhere in the `Assets`.
+Put the entire project (excluding the `.csproj` file) to anywhere in the `Assets`.
 
 Alternatively, you can download the precompiled DLL from release page and put the DLL to your `Assets\Plugins` folder
 ### Non-Unity
-Include the Project (or the `.vsproj`) to your solution (Solution > Add > Existing Project).
+Include the Project (or the `.csproj`) to your solution (Solution > Add > Existing Project).
 
 ## Usage
 First, Set the File path and name before your first access to SaveData Get/Set method. This class will initialize itself once when Get/Set method is called and then cache
@@ -74,7 +74,7 @@ You can also control on how the data contained in the SaveData class is serializ
 ## Reference Compilation
 If you do not want to edit the source code of this library after cloning or just edit once for all, you can compile this library as a normal DLL.
 
-Open the `PSW.BinarySave.vsproj` file with Visual Studio or any C#-capable IDE and then Build it with `Release|Any CPU` configuration.
+Open the `PSW.BinarySave.csproj` file with Visual Studio or any C#-capable IDE and then Build it with `Release|Any CPU` configuration.
 and then add the built DLL as reference to your C# Project / Solution.
 
 ### Framework Version
